@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<CPdConfig>
+<DojoConfig>
   <ServerConfig>
     <login_port>9500</login_port>
     <game_port>9501</game_port>
@@ -16,7 +16,7 @@
   <BotConfig>
     <bot_name>Dojo</bot_name>
   </BotConfig>
-  <CPdConfig>
+  <LicenseConfig>
     <dojo_license>NHD999LKOPD3M1T</dojo_license>
-  </CPdConfig>
-</CPdConfig>
+  </LicenseConfig>
+</DojoConfig>
