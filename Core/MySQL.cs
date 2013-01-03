@@ -10,7 +10,7 @@ namespace Dojo.Core
     class MySQL
     {
         /* Dojo | Club Penguin Emulator
-         * Written by Seether (http://tiber.me/)
+         * Written by manipulate (http://tiber.me/)
          * Thanks to Cygnui's cyCP for help on a couple things. :)
          */
 
@@ -30,16 +30,7 @@ namespace Dojo.Core
             }
             catch (MySqlException ex)
             {
-                switch (ex.Number)
-                {
-                    case 0:
-                        Logger.WriteError("Could not connect to the MySQL server!");
-                        break;
-
-                    case 1045:
-                        Logger.WriteError("Invalid MySQL username or password!");
-                        break;
-                }
+                Logger.WriteError(ex.Message);
             }
         }
         public MySqlDataReader GetData(string cmd)

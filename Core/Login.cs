@@ -12,7 +12,7 @@ namespace Dojo.Core
     class Login
     {
         /* Dojo | Club Penguin Emulator
-         * Written by Seether (http://tiber.me/)
+         * Written by manipulate (http://tiber.me/)
          * Thanks to Cygnui's cyCP for help on a couple things. :)
          */
 
@@ -72,7 +72,6 @@ namespace Dojo.Core
                     {
                         TcpClient.Close();
                         ClientStream.Close();
-                        Logger.Write("A user has disconnected!");
                     }
                     catch { }
                 }

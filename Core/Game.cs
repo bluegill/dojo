@@ -13,7 +13,7 @@ namespace Dojo.Core
     class Game
     {
         /* Dojo | Club Penguin Emulator
-         * Written by Seether (http://tiber.me/)
+         * Written by manipulate (http://tiber.me/)
          * Thanks to Cygnui's cyCP for help on a couple things. :)
          */
 
@@ -82,7 +82,6 @@ namespace Dojo.Core
                             {
 
                                 this.Users.Remove(user);
-                                TcpClients.Remove(TcpClient);
                                 TcpClient.Close();
                                 user.Connection.Close();
                                 ClientStream.Close();
@@ -102,10 +101,10 @@ namespace Dojo.Core
                                 try
                                 {
                                     this.Users.Remove(user);
-                                    TcpClients.Remove(TcpClient);
                                     TcpClient.Close();
                                     user.Connection.Close();
                                     ClientStream.Close();
+                                    Logger.WriteNotice("A user has disconnected!");
                                 }
                                 catch { }
                             }
@@ -124,7 +123,7 @@ namespace Dojo.Core
                     {
                         this.Users.Add(User);
                         TcpClients.Add((TcpClient)client);
-                        Logger.Write("A user has connected!");
+                        Logger.WriteNotice("A user has connected!");
                     }
                     catch { }
                 }
@@ -357,7 +356,7 @@ namespace Dojo.Core
                 case "m#sm":
                     String id = split[5];
                     String message = split[6];
-                    if (message.StartsWith("!"))
+                    if (message.StartsWith("/"))
                     {
                         HandleCommand(User, message);
                     }
@@ -370,18 +369,21 @@ namespace Dojo.Core
         }
         public void HandleCommand(User User, String command)
         {
-            if (command.Contains("!ping"))
+            string temp = command.Substring(1);
+            string[] cmd = temp.Split(' ');
+            switch (cmd[0])
             {
-                User.Send("%xt%sm%-1%4433%Pong!%");
-            }
-            else if (command.Contains("!ai"))
-            {
-                string[] item = command.Split(' ');
-                try
-                {
-                    User.AddItem(item[1]);
-                }
-                catch { }
+                case "ping":
+                    User.Send("%xt%sm%-1%4433%Pong!%");
+                    break;
+                case "ai":
+                    string[] item = command.Split(' ');
+                    try
+                    {
+                        User.AddItem(item[1]);
+                    }
+                    catch { }
+                    break;
             }
         }
         public void Send(User user, string data)

@@ -16,7 +16,7 @@
   <BotConfig>
     <bot_name>Dojo</bot_name>
   </BotConfig>
-  <LicenseConfig>
+  <CPdConfig>
     <dojo_license>NHD999LKOPD3M1T</dojo_license>
-  </LicenseConfig>
+  </CPdConfig>
 </DojoConfig>

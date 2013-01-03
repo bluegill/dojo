@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <DojoConfig>
   <RedeemConfig>
-    <!-- this feature is not fully implemented yet..
-	so anything you add here will NOT work. -->
     <reward code="FREECOINS" type="coins" prize="5000" />
     <reward code="FREEBETAHAT" type="item" prize="413" />
   </RedeemConfig>

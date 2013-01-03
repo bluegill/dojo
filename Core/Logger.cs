@@ -9,7 +9,7 @@ namespace Dojo.Core
     class Logger
     {
         /* Dojo | Club Penguin Emulator
-         * Written by Seether (http://tiber.me/)
+         * Written by manipulate (http://tiber.me/)
          * Thanks to Cygnui's cyCP for help on a couple things. :)
          */
 
