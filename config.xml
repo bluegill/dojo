@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CPdConfig>
+  <ServerConfig>
+    <login_port>9500</login_port>
+    <game_port>9501</game_port>
+    <server_host>localhost</server_host>
+    <server_debug>true</server_debug>
+  </ServerConfig>
+  <MySQLConfig>
+    <mysql_host>127.0.0.1</mysql_host>
+    <mysql_port>3306</mysql_port>
+    <mysql_user>root</mysql_user>
+    <mysql_pass></mysql_pass>
+    <mysql_database>Dojo</mysql_database>
+  </MySQLConfig>
+  <BotConfig>
+    <bot_name>Dojo</bot_name>
+  </BotConfig>
+  <CPdConfig>
+    <dojo_license>NHD999LKOPD3M1T</dojo_license>
+  </CPdConfig>
+</CPdConfig>
