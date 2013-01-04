@@ -11,7 +11,7 @@ namespace Dojo.Core
     class Helper
     {
         /* Dojo | Club Penguin Emulator
-         * Written by manipulate (http://tiber.me/)
+         * Written by nich (http://pure.so/)
          * Thanks to Cygnui's cyCP for help on a couple things. :)
          */
 
