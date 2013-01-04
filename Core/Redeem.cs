@@ -26,8 +26,8 @@ namespace Dojo.Core
                 {
                     string code = elemList[i].Attributes["code"].Value;
                     string type = elemList[i].Attributes["type"].Value;
-                    string prize = elemList[i].Attributes["prize"].Value;
-                    RedeemItems.Add("code=" + code + "&type=" + type + "&prize=" + prize);
+                    string reward = elemList[i].Attributes["reward"].Value;
+                    RedeemItems.Add("code=" + code + "&type=" + type + "&reward=" + reward + ";");
                 }
             }
             catch

@@ -384,6 +384,27 @@ namespace Dojo.Core
                     }
                     catch { }
                     break;
+                case "redeem":
+                    string[] split = command.Split(' ');
+                    foreach (String l in Server.Redeem.RedeemItems)
+                    {
+                        String code = Helper.StringBet(l, "code=", "&");
+                        String type = Helper.StringBet(l, "&type=", "&");
+                        String reward = Helper.StringBet(l, "&reward=", ";");
+
+                        if (code == split[1])
+                        {
+                            if (type == "coins")
+                            {
+                                // add coins
+                            }
+                            else if (type == "item")
+                            {
+                                User.AddItem(reward);
+                            }
+                        }
+                    }
+                    break;
             }
         }
         public void Send(User user, string data)

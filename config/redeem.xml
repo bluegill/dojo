@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <DojoConfig>
   <RedeemConfig>
+	<!--
+		simple in-game redemption..
+		type /redeem CODE_HERE in-game to redeem your reward,
+		the coins type won't work until I add coin handling.
+	-->
     <reward code="FREECOINS" type="coins" prize="5000" />
     <reward code="FREEBETAHAT" type="item" prize="413" />
   </RedeemConfig>

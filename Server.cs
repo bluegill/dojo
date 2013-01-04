@@ -18,11 +18,11 @@ namespace Dojo
 
         public static double version = 0.5;
         public static MySQL MySQL;
-
+        public static Redeem Redeem;
         public static void Main(string[] args)
         {
             Config.loadXML();
-            Redeem Redeem = new Redeem();
+            Redeem = new Redeem();
             Redeem.loadXML();
             Core.Core.Setup();
             if (Convert.ToDouble(Helper.GetFileContents("http://core.dojo.pure.so/version")) != version)
