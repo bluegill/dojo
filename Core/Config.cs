@@ -85,7 +85,7 @@ namespace Dojo.Core
             }
             catch
             {
-                Logger.WriteError("dojo.xl not found, or contains invalid data. Please check the config directory.");
+                Logger.WriteError("dojo.xml not found, or contains invalid data. Please check the config directory.");
             }
         }
     }

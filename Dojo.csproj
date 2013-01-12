@@ -56,8 +56,9 @@
     <Compile Include="Core\MySQL.cs" />
     <Compile Include="Core\Game.cs" />
     <Compile Include="Core\Login.cs" />
+    <Compile Include="Core\Redeem\RedeemReward.cs" />
     <Compile Include="Core\User.cs" />
-    <Compile Include="Core\Redeem.cs" />
+    <Compile Include="Core\Redeem\Redeem.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

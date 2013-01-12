@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using MySql.Data.MySqlClient;
+using Dojo.Core.Redeem;
 
 namespace Dojo.Core
 {
@@ -386,17 +387,17 @@ namespace Dojo.Core
                     break;
                 case "redeem":
                     string[] split = command.Split(' ');
-                    foreach (String l in Server.Redeem.RedeemItems)
+                    foreach (RedeemReward l in Server.Redeem.RedeemItems)
                     {
-                        String code = Helper.StringBet(l, "code=", "&");
-                        String type = Helper.StringBet(l, "&type=", "&");
-                        String reward = Helper.StringBet(l, "&reward=", ";");
+                        String code = l.code;
+                        String type = l.type;
+                        int reward = l.id;
 
                         if (code == split[1])
                         {
                             if (type == "coins")
                             {
-                                // add coins
+                                User.AddCoins(reward);
                             }
                             else if (type == "item")
                             {
