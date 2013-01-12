@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using Dojo.Core;
+using Dojo.Core.Redeem;
 
 namespace Dojo
 {
@@ -25,11 +26,11 @@ namespace Dojo
             Redeem = new Redeem();
             Redeem.loadXML();
             Core.Core.Setup();
-            if (Convert.ToDouble(Helper.GetFileContents("http://core.dojo.pure.so/version")) != version)
+            /*if (Convert.ToDouble(Helper.GetFileContents("http://core.dojo.pure.so/version")) != version)
             {
                 Logger.WriteNotice("New version available! Please visit http://dojo.pure.so/ to download!");
             }
-            Licensing Licensing = new Licensing();
+            Licensing Licensing = new Licensing(); pure.so is down ): */
             MySQL = new MySQL();
             Login Login = new Login();
             Thread LoginThread = new System.Threading.Thread(Login.AcceptClient);

@@ -72,6 +72,9 @@ namespace Dojo.Core
             }
             catch { }
         }
+        public void AddCoins(int amount) {
+            this.coins += amount;
+        }
         public string GenerateUserString(String user)
         {
             try
@@ -152,6 +155,9 @@ namespace Dojo.Core
                 }
             }
             catch { }
+        }
+        public void AddItem(int item) {
+            this.AddItem(Convert.ToString(item));
         }
         public void JoinRoom(int room, int UserX, int UserY, bool isIgloo = false)
         {
